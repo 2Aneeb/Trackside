@@ -1,0 +1,55 @@
+.NavSearch {
+    background: repeating-linear-gradient(
+      to right,     /* Direction of the stripes: "to right" means horizontal stripes */
+      red,          /* The first color */
+      red 150px,     /* The red color stops after 50px */
+      white 150px,   /* The white color starts after 50px */
+      white 300px   /* The white color stops after 100px, so the total width is 100px (50px red, 50px white) */
+    );
+    height: 100px;
+    border-bottom: 5px solid black;
+    display: flex;
+    font-size: xx-large;
+    padding-left: 1rem;
+  }
+
+  .NavSearch input {
+    background-color: rgb(171, 189, 205);
+    height: 2.5rem;
+    width: 80rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: x-large;
+    margin-top: 1.5rem;
+    margin-left: 25%;
+    margin-right: 20rem;
+    padding: 0.5rem;
+  }
+
+  .NavSearch button {
+    font-size: x-large;
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    background-color: rgb(171, 189, 205);
+    border: 2px solid rgb(171, 189, 205);
+    border-radius: 5px;
+  }
+
+  .NavSearch button:hover {
+    background: transparent;
+    border: 2px solid black
+  }
+
+  .NavSearch button:active {
+    background-color: rgb(171, 189, 205);
+    border: 2px solid rgb(171, 189, 205);
+  }
+  
+  
+  #logo {
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
