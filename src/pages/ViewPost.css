@@ -1,0 +1,14 @@
+.ViewPost {
+    display: flex;
+    justify-content: center;
+}
+
+.Post {
+    background-color: rgb(171, 189, 205);
+    margin-top: 5rem;
+    height: 40rem;
+    width: 44rem;
+    border-radius: 10px;
+    border: 3px solid rgb(171, 189, 205);
+    padding: 2rem;
+}

@@ -2,20 +2,22 @@ import { useRoutes } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './PostCard.css'
 
-function PostCard() {
+function PostCard(props) {
 
 
     //title, and optionally additional textual content and/or an image added as an external image URL
     //By default, only the time created, title, and upvotes count for each post is shown on the posts feed
     return (
         <div className="PostCard">
-            <div className='Card'>
-                PostCard
-               <br />
-            <Link to="/view-post"><button className="headerBtn"> View</button></Link>
-            <Link to="/edit-post/:id"><button className="headerBtn"> Edit</button></Link>
-            </div>
-
+            <br />
+            <Link to={"/view-post/" + props.id} className="CardLink">
+                <div className='Card'>
+                
+                        <h3>{props.Title}</h3> 
+                        <p>{props.Desc}</p> 
+                    
+                </div>
+            </Link>
         </div>
     )
 }  

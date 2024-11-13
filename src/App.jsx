@@ -19,7 +19,7 @@ function App() {
         element: <HomeFeed/>
       },
       {
-        path:"/view-post",
+        path:"/view-post/:id",
         element: <ViewPost/>
       },
       {

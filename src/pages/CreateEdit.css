@@ -1,0 +1,31 @@
+.CreatePost {
+    display: flex;
+    justify-content: center;
+}
+
+.CreatePost form {
+   background-color: rgb(171, 189, 205);
+   margin-top: 5rem;
+   height: 40rem;
+   width: 44rem;
+   border-radius: 10px;
+   border: 3px solid rgb(171, 189, 205);
+   padding: 2rem;
+}
+
+label {
+ font-size: x-large;
+}
+
+.title {
+    height: 2rem;
+    width: 40rem;
+    font-size: larger;
+}
+
+.desc {
+    width: 40rem;
+    height: 10rem;
+    font-size: x-large;
+    resize: none;
+ }

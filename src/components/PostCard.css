@@ -7,7 +7,18 @@
 }
 
 .Card {
+
+    
+    
+}
+
+
+
+.CardLink {
+    text-decoration: none;  
+    color: inherit;     
     background-color: rgb(38, 38, 38);
     width: 600px;
     height: 300px;
+    margin: 1rem;
 }
