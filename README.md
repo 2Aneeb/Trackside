@@ -2,7 +2,7 @@
 
 Submitted by: **Aneeb Zulfiqar**
 
-This web app: **insert description**
+This web app: **Discuss track side topics! Talk about motorsports news, events or share something cool!**
 
 Time spent: **12** hours spent in total
 
@@ -33,26 +33,17 @@ The following **optional** features are implemented:
 - [ ] Users can upload images directly from their local machine as an image file
 - [X] Display a loading animation whenever data is being fetched
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
-
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/2Aneeb/R6TeamApp/blob/main/src/assets/web1027g2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with ScreenToGif 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Some text and imagse are copied from the internet
 
 ## License
 
