@@ -2,3 +2,38 @@ h2 {
     text-align: center;
     color: lightgray;
 }
+
+.SortBtns {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    display: flex;
+    color: white;
+ 
+}
+
+.SortBtns h3 {
+    background-color: rgb(73, 73, 73);
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 1rem;
+}
+
+.SortBtns button {
+    background-color: rgb(171, 189, 205);
+    font-size: medium;
+    cursor: pointer;
+    background-color: rgb(171, 189, 205);
+    border: 2px solid rgb(171, 189, 205);
+    border-radius: 5px;
+}
+
+
+.SortBtns button:hover {
+    background-color: rgb(132, 136, 138);
+}
+
+.SortBtns button:active {
+    background-color: rgb(90, 91, 92);
+
+}

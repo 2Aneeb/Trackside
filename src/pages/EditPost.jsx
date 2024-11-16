@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useRoutes, Link, useNavigate, useParams } from 'react-router-dom'; 
 import { supabase } from '../client';
 import './CreateEdit.css'
 
 function EditPost() {
     const { id } = useParams();
     const [post, setPost] = useState('');  
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchPost = async () => {
@@ -41,7 +42,7 @@ function EditPost() {
         .update({Title: post.Title, Description: post.Description, Image: post.Image})
         .eq('id', id)
 
-        window.location = "/";
+        navigate('/');
     }
 
 
@@ -57,7 +58,7 @@ function EditPost() {
                 /><br />
                 <br />
                 <label htmlFor="Description">Description</label> <br />
-                <textarea className="desc" name="Description" id="Description" value={post.Description} onChange={handleChange} maxLength="322"  placeholder="Enter Description"></textarea>
+                <textarea className="desc" name="Description" id="Description" value={post.Description} onChange={handleChange} maxLength="350"  placeholder="Enter Description"></textarea>
                 <br />
                 <label htmlFor="Image">Image URL</label> <br />
                 <input className="title" type="text" id="Image" name="Image" value={post.Image} onChange={handleChange} placeholder="Enter image URL"/><br />

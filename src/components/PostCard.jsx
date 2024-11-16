@@ -4,9 +4,6 @@ import './PostCard.css'
 
 function PostCard(props) {
 
-
-    //title, and optionally additional textual content and/or an image added as an external image URL
-    //By default, only the time created, title, and upvotes count for each post is shown on the posts feed
     return (
         <div className="PostCard">
             <br />
@@ -14,8 +11,12 @@ function PostCard(props) {
                 <div className='Card'>
                         <h3>{props.Title}</h3> 
                         <p>{props.Desc}</p> 
-                        <p>{props.Upvotes} upvotes</p>
-                        <p>Posted on: {props.created_at}</p>
+                        {props.Image ? <img src={props.Image} alt="image" />: ''}
+                        <div className={props.Image ? '' : 'no-image-margin'}>
+                            <p>{props.Upvotes} upvotes</p>
+                            <p>Posted on: {props.created_at}</p>
+                        </div>
+                  
                 </div>
             </Link>
         </div>

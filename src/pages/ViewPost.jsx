@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; 
+import { useRoutes, Link, useNavigate, useParams } from 'react-router-dom';  
 import { supabase } from '../client';
-import { Link } from 'react-router-dom';
 import './ViewPost.css';
 
 function ViewPost() {
     const { id } = useParams();
     const [post, setPost] = useState(null); 
     const [upVotes, setUpvotes] = useState(0); 
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchPost = async () => {
@@ -37,7 +37,7 @@ function ViewPost() {
             console.error('Error deleting post:', error);
         } else {
             console.log('Deleted');
-            window.location = "/"; 
+            navigate('/')
         }
     };
 
@@ -55,23 +55,25 @@ function ViewPost() {
     };
 
     if (!post) {
-        return <div>Loading...</div>;
+        return (
+            <div className="loading-container">
+              <div className="spinner"></div>
+            </div>
+          );
+          
     }
 
     return (
         <div className='ViewPost'>
             <div className='Post'>
                 <h1>{post.Title}</h1>
-                <h3 className='h3'>{post.Description}</h3>
-                <h4>{post.Image}</h4>
+                <p className='desc'>{post.Description}</p>
+                {post.Image ? <img src={post.Image} alt="image" />: ''}
                 <h4>{upVotes} upvotes</h4>
                 <button onClick={upVotePost}>Upvote</button>
-                <Link to={"/edit-post/" + post.id}><button className="headerBtn">Edit</button></Link>
+                <Link to={"/edit-post/" + post.id}><button className="">Edit</button></Link>
                 <button className="deleteBtn" onClick={deletePost}>Delete</button>
-                <div className='Comments'>
-                    <h3>Comment 1</h3>
-                </div>
-            </div>
+             </div>
         </div>
     );
 }

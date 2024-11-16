@@ -3,15 +3,9 @@
     justify-content: center;    
     margin: 0;
     color: white;
+    font-family: Arial, Helvetica, sans-serif
      /* height: 100vh;    */       
 }
-
-.Card {
-
-    
-    
-}
-
 
 
 .CardLink {
@@ -19,6 +13,23 @@
     color: inherit;     
     background-color: rgb(38, 38, 38);
     width: 600px;
-    height: 300px;
+    height: 375px;
     margin: 1rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.PostCard .CardLink img {
+    margin-top: 0.5rem;
+    max-width: 25rem;
+    max-height: 13rem; 
+    
+}
+
+p {
+ padding-top: 5px;
+}
+
+.no-image-margin {
+    margin-top: 13rem;
 }

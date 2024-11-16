@@ -1,48 +1,45 @@
-import React from 'react';
-import { useState } from 'react'
-import './App.css'
-import { useRoutes } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useRoutes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CreatePost from './pages/CreatePost';
 import EditPost from './pages/EditPost';
 import ViewPost from './pages/ViewPost';
 import HomeFeed from './pages/HomeFeed';
 import NavSearch from './components/NavSearch';
-
+import NotFound from './pages/NotFound';
 
 function App() {
-   
-    // Sets up routes
-    let element = useRoutes([
-      {
-        path:"/",
-        element: <HomeFeed/>
-      },
-      {
-        path:"/view-post/:id",
-        element: <ViewPost/>
-      },
-      {
-        path:"/create-post",
-        element: <CreatePost/>
-      },
-      {
-        path:"/edit-post/:id",
-        element: <EditPost/>
-      },
-   
-  
-    ]);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  let element = useRoutes([
+    {
+      path: "/",
+      element: <HomeFeed searchTerm={searchTerm} />, 
+    },
+    {
+      path: "/view-post/:id",
+      element: <ViewPost />,
+    },
+    {
+      path: "/create-post",
+      element: <CreatePost />,
+    },
+    {
+      path: "/edit-post/:id",
+      element: <EditPost />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
 
   return (
     <div>
-      <NavSearch/>
-
+      <NavSearch setSearchTerm={setSearchTerm} />
       {element}
-    
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;
