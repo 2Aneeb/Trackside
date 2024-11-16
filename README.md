@@ -37,7 +37,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://github.com/2Aneeb/R6TeamApp/blob/main/src/assets/web1027g2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='src\assets\web102Final.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ScreenToGif 
 
