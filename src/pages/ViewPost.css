@@ -6,9 +6,18 @@
 .Post {
     background-color: rgb(171, 189, 205);
     margin-top: 5rem;
-    height: 40rem;
+    height: 30rem;
     width: 44rem;
     border-radius: 10px;
     border: 3px solid rgb(171, 189, 205);
     padding: 2rem;
+}
+
+.Comments {
+    margin-top: 5rem;
+}
+
+.h3 {
+    height: 10rem;
+    background-color: aliceblue;
 }

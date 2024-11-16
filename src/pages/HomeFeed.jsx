@@ -23,7 +23,18 @@ function HomeFeed() {
         {  
             posts && posts.length > 0 ?
             posts.map((posts,index) => 
-                <PostCard id={posts.id} Title={posts.Title} Desc={posts.Description} />
+                <PostCard
+                    created_at={new Date(posts.created_at).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                })}
+                id={posts.id}
+                Title={posts.Title}
+                Desc={posts.Description}
+                Upvotes={posts.Upvotes}
+          />
+          
             ) : <h2>No posts have been created yet.</h2>
             
         }

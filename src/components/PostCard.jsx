@@ -12,10 +12,10 @@ function PostCard(props) {
             <br />
             <Link to={"/view-post/" + props.id} className="CardLink">
                 <div className='Card'>
-                
                         <h3>{props.Title}</h3> 
                         <p>{props.Desc}</p> 
-                    
+                        <p>{props.Upvotes} upvotes</p>
+                        <p>Posted on: {props.created_at}</p>
                 </div>
             </Link>
         </div>
