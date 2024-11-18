@@ -40,7 +40,7 @@ function NavSearch({setSearchTerm }) {
             <input type="search" name="searchbar" id="searchbar" placeholder='Search by Title...' onChange={handleSearchChange} onKeyDown={handleKeyDown}/>
             <Link to="/"><button className="headerBtn"> Home  </button></Link>
             <Link to="/create-post"><button className="headerBtn"> Create Post </button></Link>
-            <button className='darkmodeToggle' onClick={toggleMode}>{isDarkMode ? 'Switch Dark Mode' : 'Switch Light Mode'}</button>
+            <button className='darkmodeToggle' onClick={toggleMode}>{isDarkMode ? 'Dark Mode' : 'Light Mode'}</button>
 
 
         </div>

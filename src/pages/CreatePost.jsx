@@ -22,6 +22,11 @@ function CreatePost() {
     const createPost = async (event) => {
         event.preventDefault();
 
+        if (!post.Title.trim()) {
+            alert("Title cannot be empty!");
+            return; 
+        }
+
         await supabase
         .from('Posts')
         .insert({Title: post.Title, Description: post.Description, Image: post.Image})
